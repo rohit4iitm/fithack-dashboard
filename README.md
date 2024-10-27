@@ -6,7 +6,7 @@ A React.js dashboard for FitHack that displays health stats, goal tracking, and 
 
 1. Clone the repository:
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/rohit4iitm/fithack-dashboard.git
    ```
 2. Install dependencies:
    ```bash
