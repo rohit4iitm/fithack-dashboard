@@ -12,6 +12,7 @@ import {
     Tooltip, 
     Legend 
 } from 'chart.js';
+import '../styles/HealthStats.css';
 
 ChartJS.register(
     CategoryScale,
@@ -23,6 +24,7 @@ ChartJS.register(
     Tooltip,
     Legend
 );
+
 const HealthStats = () => {
   const { currentWeight, bodyFatPercentage, bmi, weightHistory, heartRateEvolution } = userData.healthStats;
 
@@ -32,8 +34,9 @@ const HealthStats = () => {
       {
         label: 'Weight (kg)',
         data: weightHistory.map(entry => entry.weight),
-        borderColor: 'blue',
-        backgroundColor: 'rgba(0, 0, 255, 0.2)',
+        borderColor: '#4a90e2',
+        backgroundColor: 'rgba(74, 144, 226, 0.2)',
+        fill: true,
       },
     ],
   };
@@ -44,19 +47,53 @@ const HealthStats = () => {
       {
         label: 'Heart Rate (bpm)',
         data: heartRateEvolution.map(entry => entry.heartRate),
-        backgroundColor: ['green', 'yellow', 'red'],
+        backgroundColor: ['#4caf50', '#ffeb3b', '#f44336'],
       },
     ],
   };
 
+  const weightOptions = {
+    scales: {
+      y: {
+        beginAtZero: false,
+      },
+    },
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  };
+
   return (
-    <div>
-      <h2>Health Stats</h2>
-      <p>Current Weight: {currentWeight} kg</p>
-      <p>Body Fat Percentage: {bodyFatPercentage}%</p>
-      <p>BMI: {bmi}</p>
-      <Line data={weightData} />
-      <Bar data={heartRateData} />
+    <div className="health-stats-container">
+      <h2>Health Dashboard</h2>
+      
+      <div className="stats-summary">
+        <div className="stat-card">
+          <h3>Current Weight</h3>
+          <p>{currentWeight} kg</p>
+        </div>
+        <div className="stat-card">
+          <h3>Body Fat %</h3>
+          <p>{bodyFatPercentage}%</p>
+        </div>
+        <div className="stat-card">
+          <h3>BMI</h3>
+          <p>{bmi}</p>
+        </div>
+      </div>
+
+      <div className="charts">
+        <div className="chart-container">
+          <h3>Weight Over Time</h3>
+          <Line data={weightData} options={weightOptions} />
+        </div>
+        <div className="chart-container">
+          <h3>Heart Rate by Intensity</h3>
+          <Bar data={heartRateData} />
+        </div>
+      </div>
     </div>
   );
 };

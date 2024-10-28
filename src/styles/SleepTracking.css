@@ -1,0 +1,27 @@
+.sleep-tracking {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.sleep-tracking h2 {
+  font-size: 24px;
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+.sleep-tracking canvas {
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.sleep-tracking .chartjs-render-monitor {
+  max-width: 100%;
+  height: auto;
+}
+  
