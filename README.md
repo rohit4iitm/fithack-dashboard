@@ -8,11 +8,23 @@ A React.js dashboard for FitHack that displays health stats, goal tracking, and 
    ```bash
    git clone https://github.com/rohit4iitm/fithack-dashboard.git
    ```
-2. Install dependencies:
+
+2. Change directory to fithack-dashboard
+   ```bash
+   cd fithack-dashboard
+   ```
+   
+3. Install dependencies:
    ```bash
    npm install
    ```
-3. Start the application:
+4. Start the application:
    ```bash
    npm start
    ```
+
+## Student Details
+
+Name : Rohit Shinde
+Roll No. : 21f3002241
+Email Id : 21f3002241@ds.study.iitm.ac.in
