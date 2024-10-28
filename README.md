@@ -2,7 +2,7 @@
 
 A React.js dashboard for FitHack that displays health stats, goal tracking, and a session schedule.
 
-## Access Deployed Web Application [Click here](fithack.netlify.app)
+## Access Deployed Web Application [Click here](https://fithack.netlify.app)
 
 ## Setup
 
