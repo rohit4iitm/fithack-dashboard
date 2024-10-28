@@ -1,12 +1,11 @@
 import React from 'react';
 import Slider from 'react-slick'; 
-import { Link } from 'react-router-dom';
 import '../styles/Dashboard.css';
 
 const Dashboard = () => {
   const userName = "John Doe"; 
   const userEmail = "john.doe@example.com";
-  const companyName = "HealthTracker Inc.";
+  const companyName = "Fithack";
   const companyDescription = `At ${companyName}, we are committed to providing users with the tools and insights needed to reach their health goals. 
   Our platform leverages data analytics, machine learning, and expert recommendations to support users in making informed health decisions.
   With our personalized approach, we make it simple to track progress, set achievable goals, and stay motivated.`;
