@@ -13,7 +13,7 @@ A React.js dashboard for FitHack that displays health stats, goal tracking, and 
    ```bash
    cd fithack-dashboard
    ```
-   
+
 3. Install dependencies:
    ```bash
    npm install
@@ -25,6 +25,6 @@ A React.js dashboard for FitHack that displays health stats, goal tracking, and 
 
 ## Student Details
 
-Name : Rohit Shinde
-Roll No. : 21f3002241
-Email Id : 21f3002241@ds.study.iitm.ac.in
+### Name : Rohit Shinde
+### Roll No. : 21f3002241
+### Email Id : 21f3002241@ds.study.iitm.ac.in
