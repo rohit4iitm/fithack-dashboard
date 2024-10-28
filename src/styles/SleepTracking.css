@@ -1,3 +1,4 @@
+/* SleepTracking.css */
 .sleep-tracking {
   background-color: #ffffff;
   padding: 20px;
@@ -6,22 +7,61 @@
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
+}
+
+.sleep-tracking:hover {
+  transform: scale(1.02); /* Scale effect on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
 }
 
 .sleep-tracking h2 {
   font-size: 24px;
   color: #4CAF50;
   margin-bottom: 20px;
+  font-weight: bold; /* Bold font for the heading */
 }
 
 .sleep-tracking canvas {
   padding: 10px;
   background: #f5f5f5;
   border-radius: 8px;
+  border: 1px solid #e0e0e0; /* Subtle border around the canvas */
 }
 
 .sleep-tracking .chartjs-render-monitor {
   max-width: 100%;
   height: auto;
 }
-  
+
+/* Additional Styles */
+.sleep-tracking p {
+  font-size: 16px;
+  color: #555; /* Dark gray for better readability */
+  margin-top: 10px; /* Space above the paragraph */
+}
+
+.sleep-tracking .data-summary {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: rgba(75, 192, 192, 0.1); /* Light background for summary */
+  border-radius: 8px; /* Rounded corners for the summary */
+  margin-top: 20px; /* Space above the summary */
+}
+
+.sleep-tracking .data-summary div {
+  flex: 1; /* Equal width for summary items */
+  padding: 10px;
+}
+
+.sleep-tracking .data-summary h3 {
+  font-size: 20px;
+  color: #4CAF50; /* Same color as the main heading */
+  margin-bottom: 5px; /* Space below the subheading */
+}
+
+.sleep-tracking .data-summary p {
+  font-size: 16px;
+  color: #666; /* Lighter gray for subtext */
+}

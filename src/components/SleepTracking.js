@@ -21,7 +21,7 @@ const SleepTracking = () => {
     scales: {
       y: {
         beginAtZero: true,
-        max: 12, 
+        max: 12,
         title: {
           display: true,
           text: 'Hours',
@@ -30,10 +30,23 @@ const SleepTracking = () => {
     },
   };
 
+  // Example calculation for average sleep hours
+  const averageSleep = userData.sleepTracking.reduce((sum, entry) => sum + entry.hours, 0) / userData.sleepTracking.length;
+
   return (
     <div className="sleep-tracking">
       <h2>Sleep Tracking</h2>
       <Bar data={sleepData} options={options} />
+      <div className="data-summary">
+        <div>
+          <h3>Average Sleep</h3>
+          <p>{averageSleep.toFixed(1)} hours</p>
+        </div>
+        <div>
+          <h3>Days Tracked</h3>
+          <p>{userData.sleepTracking.length} days</p>
+        </div>
+      </div>
     </div>
   );
 };
